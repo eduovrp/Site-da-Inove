@@ -17,7 +17,9 @@
 
     <!-- Custom CSS -->
     <link href="css/agency.css" rel="stylesheet">
-    <script src="js/jquery-2.1.3.min.js"></script> <!-->jQuery</!-->
+    <link href="css/style.css" rel="stylesheet">
+    <script src="js/jquery-2.1.3.min.js"></script> <!--jQuery-->
+    <script src="src/jquery.BlackAndWhite.js"></script>
 
 
     <!-- Custom Fonts -->
@@ -184,21 +186,82 @@
         </div>
     </section>
 
-     <section id="team">
-        <div class="container">
-                 <div class="row">
+    <section id="portfolio">
+     <div class="container">
+            <div class="row">
                 <div class="col-lg-12 text-center">
                     <h2 class="section-heading">
                     <div class="line-left">
                     <div class="line-right">
-                    Clientes
+                    Cases
                     </h2>
                     <h3 class="section-subheading text-muted"></h3>
-                </div>
             </div>
-            </div>
-            <div data-slick='{"slidesToShow": 4, "slidesToScroll": 4, "dots": true}'>
-                      <div class="multiple"> <img src="img/logos/envato.jpg" class="img-responsive img-centered" alt=""></div>
+            <ul id="wrapper">
+        <li>
+            <a href="1" class="bwWrapper">
+                <img  src="files/big-img.jpg" width="150" height="150" />
+            </a>
+        </li>
+        <li>
+            <a href="2" class="bwWrapper">
+                <img  src="files/big-img.jpg" width="150" height="150" />
+            </a>
+        </li>
+        <li>
+            <a href="3" class="bwWrapper">
+                <img  src="files/big-img.jpg" width="305" height="300" />
+            </a>
+        </li>
+        <li>
+            <a href="4" class="bwWrapper">
+                <img  src="files/big-img.jpg" width="150" height="150" />
+            </a>
+        </li>
+        <li>
+            <a href="5" class="bwWrapper">
+                <img  src="files/big-img.jpg" width="150" height="150" />
+            </a>
+        </li>
+        <li class="last-6">
+            <a href="6" class="bwWrapper">
+                <img  src="files/big-img.jpg" width="305" height="300" />
+            </a>
+        </li>
+        <li class="last-7">
+            <a href="7" class="bwWrapper">
+                <img  src="files/big-img.jpg" width="150" height="150" />
+            </a>
+        </li>
+        <li class="last-8">
+            <a href="8" class="bwWrapper">
+                <img  src="files/big-img.jpg" width="150" height="150" />
+            </a>
+        </li>
+        <li class="last-9">
+            <a href="9" class="bwWrapper">
+                <img  src="files/big-img.jpg" width="305" height="300" />
+            </a>
+        </li>
+    </ul>
+         </div>
+      </div>
+    </section>
+
+     <section id="team">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">
+                     <div class="line-left">
+                        <div class="line-right">
+                            Clientes
+                        </div>
+                     </div>
+                    </h2>
+                    <h3 class="section-subheading text-muted"></h3>
+                <div data-slick='{"slidesToShow": 4, "slidesToScroll": 4, "dots": true}'>
+                    <div class="multiple"> <img src="img/logos/envato.jpg" class="img-responsive img-centered" alt=""></div>
                     <div class="multiple"><img src="img/logos/designmodo.jpg" class="img-responsive img-centered" alt=""></div>
                     <div class="multiple"><img src="img/logos/themeforest.jpg" class="img-responsive img-centered" alt=""></div>
                     <div class="multiple"><img src="img/logos/creative-market.jpg" class="img-responsive img-centered" alt=""></div>
@@ -211,8 +274,11 @@
                     <div class="multiple"><img src="img/logos/designmodo.jpg" class="img-responsive img-centered" alt=""></div>
                     <div class="multiple"><img src="img/logos/themeforest.jpg" class="img-responsive img-centered" alt=""></div>
                     <div class="multiple"><img src="img/logos/creative-market.jpg" class="img-responsive img-centered" alt=""></div>
+                </div>
+            </div>
+        </div>
     </div>
-</section>
+    </section>
     <section id="contact">
         <div class="container">
             <div class="row">
@@ -303,6 +369,18 @@
                 </div>
             </div>
         </div> <!-- End -->
+            <script>
+    $('.bwWrapper').BlackAndWhite({
+        hoverEffect:true,
+        webworkerPath: 'src/',
+        intensity:1,
+        onImageReady:function(img){
+            $(img).parent().animate({
+                opacity:1
+            });
+        }
+    });
+    </script>
 
 
  <!-- Bootstrap core JavaScript
@@ -316,10 +394,6 @@
     <!-- use jssor.js + jssor.slider.js instead for development -->
     <!-- jssor.slider.mini.js = (jssor.js + jssor.slider.js) -->
     <script type="text/javascript" src="js/jssor.slider.mini.js"></script>
-
-    <!-- jQuery -->
-    <script src="js/jquery.js"></script>
-
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
 
@@ -327,10 +401,6 @@
     <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
     <script src="js/classie.js"></script>
     <script src="js/cbpAnimatedHeader.js"></script>
-
-    <!-- Contact Form JavaScript -->
-    <script src="js/jqBootstrapValidation.js"></script>
-    <script src="js/contact_me.js"></script>
 
     <!-- Custom Theme JavaScript -->
     <script src="js/agency.js"></script>
