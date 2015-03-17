@@ -18,9 +18,7 @@
     <!-- Custom CSS -->
     <link href="css/agency.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/lightbox.css">
     <script src="js/jquery-2.1.3.min.js"></script> <!--jQuery-->
-    <script src="js/lightbox.js"></script>
     <script src="src/jquery.BlackAndWhite.js"></script>
 
 
@@ -201,48 +199,48 @@
             </div>
             <ul id="wrapper">
         <li>
-            <a class="example-image-link bwWrapper" href="files/big-img.jpg" data-lightbox="example-1">
-                <img class="example-image" src="files/big-img.jpg" width="150" height="150" />
+            <a href="1" class="bwWrapper">
+                <img  src="files/big-img.jpg" width="150" height="150" />
             </a>
         </li>
         <li>
-            <a class="example-image-link bwWrapper" href="files/big-img.jpg" data-lightbox="example-2">
-                <img class="example-image" src="files/big-img.jpg" width="150" height="150" />
+            <a href="2" class="bwWrapper">
+                <img  src="files/big-img.jpg" width="150" height="150" />
             </a>
         </li>
         <li>
-            <a class="example-image-link bwWrapper" href="files/big-img.jpg" data-lightbox="example-3">
-                <img class="example-image" src="files/big-img.jpg" width="305" height="300" />
+            <a href="3" class="bwWrapper">
+                <img  src="files/big-img.jpg" width="305" height="300" />
             </a>
         </li>
         <li>
-            <a class="example-image-link bwWrapper" href="files/big-img.jpg" data-lightbox="example-4">
-                <img class="example-image" src="files/big-img.jpg" width="150" height="150" />
+            <a href="4" class="bwWrapper">
+                <img  src="files/big-img.jpg" width="150" height="150" />
             </a>
         </li>
         <li>
-            <a class="example-image-link bwWrapper" href="files/big-img.jpg" data-lightbox="example-5">
-                <img class="example-image" src="files/big-img.jpg" width="150" height="150" />
+            <a href="5" class="bwWrapper">
+                <img  src="files/big-img.jpg" width="150" height="150" />
             </a>
         </li>
         <li class="last-6">
-             <a class="example-image-link bwWrapper" href="files/big-img.jpg" data-lightbox="example-6">
-                <img class="example-image" src="files/big-img.jpg" width="305" height="300" />
+            <a href="6" class="bwWrapper">
+                <img  src="files/big-img.jpg" width="305" height="300" />
             </a>
         </li>
         <li class="last-7">
-            <a class="example-image-link bwWrapper" href="files/big-img.jpg" data-lightbox="example-7">
-                <img class="example-image" src="files/big-img.jpg" width="150" height="150" />
+            <a href="7" class="bwWrapper">
+                <img  src="files/big-img.jpg" width="150" height="150" />
             </a>
         </li>
         <li class="last-8">
-            <a class="example-image-link bwWrapper" href="files/big-img.jpg" data-lightbox="example-8">
-                <img class="example-image" src="files/big-img.jpg" width="150" height="150" />
+            <a href="8" class="bwWrapper">
+                <img  src="files/big-img.jpg" width="150" height="150" />
             </a>
         </li>
         <li class="last-9">
-            <a class="example-image-link bwWrapper" href="files/big-img.jpg" data-lightbox="example-9">
-                <img class="example-image" src="files/big-img.jpg" width="305" height="300" />
+            <a href="9" class="bwWrapper">
+                <img  src="files/big-img.jpg" width="305" height="300" />
             </a>
         </li>
     </ul>
