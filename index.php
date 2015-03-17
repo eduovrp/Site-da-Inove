@@ -200,48 +200,48 @@
                     <h3 class="section-subheading text-muted"></h3>
             </div>
             <ul id="wrapper">
-        <li>
-            <a class="example-image-link bwWrapper" href="files/big-img.jpg" data-lightbox="example-1">
+        <li class="smart1">
+            <a class="example-image-link bwWrapper" href="files/big-img1.jpg" data-lightbox="example-1">
                 <img class="example-image-sm" src="files/big-img.jpg" width="150" height="150" />
             </a>
         </li>
-        <li>
-            <a class="example-image-link bwWrapper" href="files/big-img.jpg" data-lightbox="example-2">
+        <li class="smart2">
+            <a class="example-image-link bwWrapper" href="files/big-img2.jpg" data-lightbox="example-2">
                 <img class="example-image-sm" src="files/big-img.jpg" width="150" height="150" />
             </a>
         </li>
-        <li>
-            <a class="example-image-link bwWrapper" href="files/big-img.jpg" data-lightbox="example-3">
+        <li class="smart3">
+            <a class="example-image-link bwWrapper" href="files/big-img3.jpg" data-lightbox="example-3">
                 <img class="example-image-lg" src="files/big-img.jpg" width="304" height="300" />
             </a>
         </li>
-        <li>
-            <a class="example-image-link bwWrapper" href="files/big-img.jpg" data-lightbox="example-4">
+        <li class="smart4">
+            <a class="example-image-link bwWrapper" href="files/big-img4.jpg" data-lightbox="example-4">
                 <img class="example-image-sm" src="files/big-img.jpg" width="150" height="150" />
             </a>
         </li>
-        <li>
-            <a class="example-image-link bwWrapper" href="files/big-img.jpg" data-lightbox="example-5">
+        <li class="smart5">
+            <a class="example-image-link bwWrapper" href="files/big-img5.jpg" data-lightbox="example-5">
                 <img class="example-image-sm" src="files/big-img.jpg" width="150" height="150" />
             </a>
         </li>
         <li class="last-6">
-             <a class="example-image-link bwWrapper" href="files/big-img.jpg" data-lightbox="example-6">
+             <a class="example-image-link bwWrapper" href="files/big-img6.jpg" data-lightbox="example-6">
                 <img class="example-image-lg" src="files/big-img.jpg" width="304" height="300" />
             </a>
         </li>
         <li class="last-7">
-            <a class="example-image-link bwWrapper" href="files/big-img.jpg" data-lightbox="example-7">
+            <a class="example-image-link bwWrapper" href="files/big-img7.jpg" data-lightbox="example-7">
                 <img class="example-image-sm" src="files/big-img.jpg" width="150" height="150" />
             </a>
         </li>
         <li class="last-8">
-            <a class="example-image-link bwWrapper" href="files/big-img.jpg" data-lightbox="example-8">
+            <a class="example-image-link bwWrapper" href="files/big-img8.jpg" data-lightbox="example-8">
                 <img class="example-image-sm" src="files/big-img.jpg" width="150" height="150" />
             </a>
         </li>
         <li class="last-9">
-            <a class="example-image-link bwWrapper" href="files/big-img.jpg" data-lightbox="example-9">
+            <a class="example-image-link bwWrapper" href="files/big-img9.jpg" data-lightbox="example-9">
                 <img class="example-image-lg" src="files/big-img.jpg" width="304" height="300" />
             </a>
         </li>

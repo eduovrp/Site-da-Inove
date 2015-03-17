@@ -192,36 +192,103 @@ section h2.section-heading {
 	height: 105px;
 	}
 .example-image-lg{
-	width: 212px;
+	width: 213px;
 	height: 210px;
 	}
+#wrapper {
+	list-style:none;
+	float:left;
+	margin-left: 0px;
+}
 #wrapper li {
 	float:left;
-	margin: 1px 1px 1px 1px;
+	margin: 2px 4px 5px 0;
 	background: url(css/loader.gif) center center no-repeat;
 }
 #wrapper li.last-6 {
-	margin-top: 1px;
-	margin-right: 1px;
-	margin-left: 1px;
-	margin-bottom: 1px;
+	margin-top: -16.4%;
+	margin-right: 25.3%;
+	margin-left: 0%;
+	margin-bottom: 0%;
 }
 #wrapper li.last-7 {
-	margin-top: 1px;
-	margin-right: 1px;
-	margin-left: 1px;
-	margin-bottom: 1px;
+	margin-top: -0.3%;
+	margin-right: 1.72%;
+	margin-left: -24.6%;
+	margin-bottom: 0%;
 }
 #wrapper li.last-8 {
-	margin-top: 1px;
-	margin-right: 1px;
-	margin-left: 1px;
-	margin-bottom: 1px;
+	margin-top: -0.3%;
+	margin-right: 0.40%;
+	margin-left: -8%;
+	margin-bottom: 0%;
 }
 #wrapper li.last-9 {
-	margin-top: 1px;
-	margin-right: 1px;
-	margin-left: 1px;
-	margin-bottom: 1px;
+	margin-top: -32.1%;
+	margin-right: 0%;
+	margin-left: 66.6%;
+	margin-bottom: 0%;
 	}
 }
+ @media screen and (max-width:720px){
+ .example-image-lg{
+	width: 150px;
+	height: 150px;
+}
+.example-image-sm{
+	width: 150px;
+	height: 150px;
+	}
+#wrapper li.smart1 {
+	position: inline;
+}
+#wrapper li.smart2 {
+	position: inline;
+}
+#wrapper li.smart3 {
+	position: inline;
+}
+#wrapper li.smart4 {
+	position: inline;
+}
+#wrapper li.smart5 {
+	position: inline;
+}
+
+#wrapper li.last-6 {
+	margin-top: 1px;
+	margin-right: 0px;
+	margin-left: 0px;
+	margin-bottom: 3px;
+}
+#wrapper li.last-7 {
+	margin-top: 2px;
+	margin-right: 2px;
+	margin-left: 1px;
+	margin-bottom: -1px;
+}
+#wrapper li.last-8 {
+	margin-top: -150px;
+	margin-right: 2px;
+	margin-left: 0px;
+	margin-bottom: 2px;
+}
+#wrapper li.last-9 {
+	margin-top: -149px;
+	margin-right: 0px;
+	margin-left: 2px;
+	margin-bottom: 2px;
+	}
+section#portfolio{
+	max-width: 600px;
+ }
+}
+ @media screen and (max-width:360px){
+#wrapper {
+	float:left;
+	margin-left: 0px;
+}
+section#portfolio{
+	max-width: 400px;
+ }
+ }
