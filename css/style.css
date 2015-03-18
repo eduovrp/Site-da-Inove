@@ -177,6 +177,10 @@ section h2.section-heading {
 	}
 }
  @media screen and (max-width:767px){
+ 	.navbar-fixed-top{
+	max-width: 767px;
+	max-height: 80px
+}
 .navbar-logo{
      padding: 8px;
      width: 180px;
@@ -238,14 +242,18 @@ section h2.section-heading {
     color: #696969;
 	}
 }
- @media screen and (max-width:720px){
+ @media (max-width:720px){
+ 	.navbar-fixed-top{
+	max-width: 720px;
+	max-height: 80px
+}
  .navbar-center{
     margin-left: 50px;
 }
-.navbar-default.navbar-shrink {
-       height: 80px;
-    }
-
+.navbar-default {
+    height: auto;
+    max-width: auto;
+}
  .example-image-lg{
 	width: 150px;
 	height: 150px;
@@ -297,21 +305,28 @@ section h2.section-heading {
  section h2.section-heading {
     margin-top: 0;
     margin-bottom: 15px;
-    margin-left: -260px;
-    margin-right: -260px;
+    margin-lSOLUÇÕESeft: -260px;
+    margin-right: -260pSOLUÇÕESx;
     font-size: 28px;
     color: #696969;
 	}
 }
  @media screen and (max-width:360px){
+.navbar-fixed-top{
+	max-width: 360px;
+	max-height: 80px
+}
+.navbar-default .navbar-toggle {
+	position: center;
+}
  	.navbar-center{
     margin-left: 50px;
     max-width: 360px
 }
 .navbar-default.navbar-shrink {
        height: 80px;
-       width: 360px;
-    }
+       max-width: 360px;
+ }
  	#wrapper li {
 	float:left;
 	margin: 2px 4px 5px 0;
