@@ -111,6 +111,27 @@ section h2.section-heading {
 
 /* Max 980px */
  @media screen and (max-width:990px){
+ 	.line-left {
+    background: url(line194.png) no-repeat 66px 21px;
+    background-position: left;
+    margin-left: 0px;
+}
+.line-right{
+    background: url(line194.png) no-repeat 66px 21px;
+    background-position: right;
+    margin-right: 0px;
+}
+
+.line-left-case {
+    background: url(line194.png) no-repeat 66px 21px;
+    background-position: left;
+    margin-left: 20px;
+}
+.line-right-case {
+    background: url(line194.png) no-repeat 66px 21px;
+    background-position: right;
+    margin-right: 20px;
+}
 .navbar-logo{
      padding: 8px;
      width: 80%;
@@ -170,8 +191,8 @@ section#team  {
 section h2.section-heading {
     margin-top: 0;
     margin-bottom: 15px;
-    margin-left: -160px;
-    margin-right: -160px;
+    margin-left: 0px;
+    margin-right: 0px;
     font-size: 28px;
     color: #696969;
 	}
@@ -236,16 +257,15 @@ section h2.section-heading {
 	section h2.section-heading {
     margin-top: 0;
     margin-bottom: 15px;
-    margin-left: -210px;
-    margin-right: -210px;
+    margin-left: 0px;
+    margin-right: 0px;
     font-size: 28px;
     color: #696969;
 	}
 }
  @media (max-width:720px){
  	.navbar-fixed-top{
-	max-width: 720px;
-	max-height: 80px
+	max-width: 730px;
 }
  .navbar-center{
     margin-left: 50px;
@@ -305,35 +325,51 @@ section h2.section-heading {
  section h2.section-heading {
     margin-top: 0;
     margin-bottom: 15px;
-    margin-lSOLUÇÕESeft: -260px;
-    margin-right: -260pSOLUÇÕESx;
+    margin-left: 0px;
+    margin-right: 0px;
     font-size: 28px;
     color: #696969;
 	}
 }
  @media screen and (max-width:360px){
+.line-left {
+    background: url(line60.png) no-repeat 66px 21px;
+    background-position: left;
+    margin-left: 0px;
+}
+.line-right{
+    background: url(line60.png) no-repeat 66px 21px;
+    background-position: right;
+    margin-right: 0px;
+}
+
+.line-left-case {
+    background: url(line60.png) no-repeat 66px 21px;
+    background-position: left;
+    margin-left: 20px;
+}
+.line-right-case {
+    background: url(line60.png) no-repeat 66px 21px;
+    background-position: right;
+    margin-right: 20px;
+}
 .navbar-fixed-top{
-	max-width: 360px;
-	max-height: 80px
+	max-width: 370px;
 }
 .navbar-default .navbar-toggle {
 	position: center;
 }
- 	.navbar-center{
+.navbar-center{
     margin-left: 50px;
-    max-width: 360px
+    max-width: 370px
 }
 .navbar-default.navbar-shrink {
-       height: 80px;
-       max-width: 360px;
+      max-width: 370px;
  }
  	#wrapper li {
 	float:left;
 	margin: 2px 4px 5px 0;
 	background: url(loader.gif) center center no-repeat;
-}
-.navbar-default.navbar-shrink {
-       height: 75px;
 }
  .example-image-lg{
 	width: 120px;
@@ -365,9 +401,10 @@ section#portfolio{
   section h2.section-heading {
     margin-top: 0;
     margin-bottom: 15px;
-    margin-left: -360px;
-    margin-right: -360px;
+    margin-left: 0px;
+    margin-right: 0px;
     font-size: 28px;
     color: #696969;
 	}
  }
+
