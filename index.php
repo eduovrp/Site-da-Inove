@@ -105,15 +105,15 @@
             </div>
             <!-- Slides Container -->
             <div u="slides" style="cursor: move; position: absolute; left: 0px; top: 0px; width: 1300px; height: 500px; overflow: hidden;">
+               <?php 
+               require 'functions.php';
+               $imagens = select_banner();
+               foreach($imagens as $imagem):
+                ?>
                 <div>
-                    <img u="image" src2="img/1920/red.jpg" />
+                    <img u="image" src="<?= $imagem['url']; ?>" />
                 </div>
-                <div>
-                    <img u="image" src2="img/1920/purple.jpg" />
-                </div>
-                <div>
-                    <img u="image" src2="img/1920/blue.jpg" />
-                </div>
+            <?php endforeach; ?>
             </div>
 
             <?php
@@ -263,19 +263,12 @@
                     </h2>
                     <h3 class="section-subheading text-muted"></h3>
                 <div data-slick='{"slidesToShow": 4, "slidesToScroll": 4, "dots": true}'>
-                    <div class="multiple"> <img src="img/logos/envato.jpg" class="img-responsive img-centered" alt=""></div>
-                    <div class="multiple"><img src="img/logos/designmodo.jpg" class="img-responsive img-centered" alt=""></div>
-                    <div class="multiple"><img src="img/logos/themeforest.jpg" class="img-responsive img-centered" alt=""></div>
-                    <div class="multiple"><img src="img/logos/creative-market.jpg" class="img-responsive img-centered" alt=""></div>
-                    <div class="multiple"><img src="img/logos/designmodo.jpg" class="img-responsive img-centered" alt=""></div>
-                    <div class="multiple"><img src="img/logos/creative-market.jpg" class="img-responsive img-centered" alt=""></div>
-                    <div class="multiple"> <img src="img/logos/envato.jpg" class="img-responsive img-centered" alt=""></div>
-                    <div class="multiple"><img src="img/logos/designmodo.jpg" class="img-responsive img-centered" alt=""></div>
-                    <div class="multiple"><img src="img/logos/themeforest.jpg" class="img-responsive img-centered" alt=""></div>
-                    <div class="multiple"><img src="img/logos/creative-market.jpg" class="img-responsive img-centered" alt=""></div>
-                    <div class="multiple"><img src="img/logos/designmodo.jpg" class="img-responsive img-centered" alt=""></div>
-                    <div class="multiple"><img src="img/logos/themeforest.jpg" class="img-responsive img-centered" alt=""></div>
-                    <div class="multiple"><img src="img/logos/creative-market.jpg" class="img-responsive img-centered" alt=""></div>
+                <?php 
+                $logos = select_logos();
+                foreach($logos as $logo):
+                 ?>
+                    <div class="multiple"> <img src="<?= $logo['url']; ?>" class="img-responsive img-centered" alt=""></div>
+                <?php endforeach; ?>
                 </div>
             </div>
         </div>
