@@ -51,6 +51,16 @@ iframe {
 	display:block;
 }
 
+.input-group input[type="text"]{
+	width: 400px;
+	margin-bottom: 10px;
+}
+
+.input-group p{
+	padding: 10px;
+}
+
+
 	/* Max 1200px */
  @media screen and (max-width:1200px){
 .example-image-sm{

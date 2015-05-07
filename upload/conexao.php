@@ -1,7 +1,6 @@
 <?php
 try {
-	$conexao = new PDO ("mysql:host=localhost;dbname=inove", "root", "",
-	array(PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES utf8'));
+	$conexao = new PDO ("mysql:host=localhost;dbname=inove;charset=utf8", "root", "");
 
 	if (!$conexao) {
 		echo "erro ao conectar no banco de dados";

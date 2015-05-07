@@ -11,24 +11,24 @@ $login = new Login();
 // ... verifica se o usuario está logado
 if ($login->usuarioLogado() == true) {
 ?>
-
+<!doctype html>
 <html>
 <head>
 	<meta charset="UTF-8">
-	<title>Listar</title>
+	<title>Admin - Alterar Case</title>
 	<link rel="stylesheet" type="text/css" href="semantic/semantic.min.css">
 	<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="../css/style.css">
-	<link rel="stylesheet" type="text/css" href="../font-awesome/css/font-awesome.min.css">
-<style type="text/css">
-	.container{
-		width: 960px;
-		margin: 0 auto;
-		padding-top: 100px; 
-	}
-</style>
+	<style type="text/css">
+		.container{
+			width: 960px;
+			margin: 0 auto;
+			padding-top: 100px; 
+		}
+	</style>
 </head>
 <body>
+
 <div class="bs-example bs-navbar-top-example" data-example-id="navbar-fixed-to-top">
     <nav class="navbar navbar-default navbar-fixed-top">
       <!-- We use the fluid option here to avoid overriding the fixed width of a normal container within the narrow content columns. -->
@@ -46,58 +46,48 @@ if ($login->usuarioLogado() == true) {
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-6">
           <ul class="nav navbar-nav">
             <li><a href="index.php">Upload</a></li>
-            <li class="active"><a href="listar.php">Gerenciar Imagens</a></li>
-            <li><a href="cases.php">Cases</a></li>
+            <li><a href="listar.php">Gerenciar Imagens</a></li>
+            <li class="active"><a href="cases.php">Cases</a></li>
             <li><a href="index.php?logout">Sair</a></li>
           </ul>
         </div><!-- /.navbar-collapse -->
       </div>
     </nav>
   </div><!-- /example -->
+  <div class="container">
+<?php include 'mensagens.php'; 
+$cod_img = $_POST['cod_img'];
+?>
+	<form method="post" action="update.php" enctype="multipart/form-data" class="ui form segment">
 
-<?php 
-require 'functions.php';
-$imagens = mostraImagens();
- ?>
+		<div class="two fields">
 
-	<div class="container">
-
-	<?php include 'mensagens.php'; ?>
-	<div class="row">
-		<div class="col-md-8">
-		<table class="ui striped table">
-			<thead>
-				<tr>
-					<th>Tipo</th>
-					<th>Arquivo</th>
-					<th>#</th>
-				</tr>
-			</thead>
-
-			<tbody>
-				<?php foreach ($imagens as $imagem) : ?>
-					<tr>
-						<td><?= $imagem['tipo']; ?></td>
-						<td><img src="<?= $imagem['url'] ?>" width="250" height="140"></td>
-						<td><a href="javascript:excluiImg(<?= $imagem['cod_img']; ?>)"><i class="fa fa-trash fa-2x"></i> Excluir</a></td>
-					</tr>
-				<?php endforeach ?>
-			</tbody>
-
-		</table>
+		    <div class="field">
+		      <label>Imagem</label>
+		      <select name="cod_img">
+		      	<option value="<?=$cod_img;?>">Imagem <?=$cod_img;?> </option>
+		      </select>
+		    </div>
 		</div>
+
+		<div class="one fields">
+			<div class="field">
+		
+			<label>Arquivo *</label>
+		      <input name="arquivo" type="file" required>
+		    </div>
+
 		</div>
-	</div>
-	<form action="delete.php" method="POST" id="excluiImg">
-		<input type="hidden" name="cod_img">
+		<br>
+		<div class="one filds">
+			<p>
+				<input type="submit" value="Fazer Upload" class="ui green button">
+			</p>
+		</div>
+
 	</form>
-	<script>
-	function excluiImg(cod_img){
-		f = document.getElementById('excluiImg');
-		f.cod_img.value = cod_img;
-		f.submit();
-	}
-</script>
+
+	</div>
 </body>
 </html>
 <?php

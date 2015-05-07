@@ -1,3 +1,9 @@
+<?php 
+if(!isset($_SESSION))
+{
+  session_start();
+}
+ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -22,7 +28,6 @@
     <script src="js/jquery-2.1.3.min.js"></script> <!--jQuery-->
     <script src="js/lightbox.js"></script>
     <script src="src/jquery.BlackAndWhite.js"></script>
-
 
     <!-- Custom Fonts -->
     <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
@@ -84,13 +89,13 @@
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
                     <li>
-                        <a href="https://facebook.com"  target="_blank" title="Facebook"><i class="fa fa-facebook"></i></a>
+                        <a href="https://www.facebook.com/in9vecomunicacao"  target="_blank" title="Facebook"><i class="fa fa-facebook"></i></a>
                     </li>
                     <li>
                         <a href="https://twitter.com"  target="_blank" title="Twitter"><i class="fa fa-twitter"></i></a>
                     </li>
                     <li>
-                        <a href="https://instagram.com"  target="_blank" title="Instagram"><i class="fa fa-instagram"></i></a>
+                        <a href="http://instagram.com/inove_comunicacao"  target="_blank" title="Instagram"><i class="fa fa-instagram"></i></a>
                     </li>
                 </ul>
             </div>
@@ -201,6 +206,9 @@
         </div>
     </section>
 
+<?php require 'upload/functions.php'; 
+$img = selectCases();
+?>
     <section id="portfolio">
      <div class="container">
             <div class="row">
@@ -214,48 +222,48 @@
             </div>
             <ul id="wrapper">
         <li class="smart1">
-            <a class="example-image-link bwWrapper" href="files/big-img1.jpg" data-lightbox="example-1">
-                <img class="example-image-sm" src="files/big-img.jpg" width="150" height="150" />
+            <a class="example-image-link bwWrapper" href="<?=$img[0]['url'];?>" data-lightbox="example-1">
+                <img class="example-image-sm" src="<?=$img[0]['url'];?>" width="150" height="150" />
             </a>
         </li>
         <li class="smart2">
-            <a class="example-image-link bwWrapper" href="files/big-img2.jpg" data-lightbox="example-2">
-                <img class="example-image-sm" src="files/big-img.jpg" width="150" height="150" />
+            <a class="example-image-link bwWrapper" href="<?=$img[1]['url'];?>" data-lightbox="example-2">
+                <img class="example-image-sm" src="<?=$img[1]['url'];?>" width="150" height="150" />
             </a>
         </li>
         <li class="smart3">
-            <a class="example-image-link bwWrapper" href="files/big-img3.jpg" data-lightbox="example-3">
-                <img class="example-image-lg" src="files/big-img.jpg" width="304" height="300" />
+            <a class="example-image-link bwWrapper" href="<?=$img[2]['url'];?>" data-lightbox="example-3">
+                <img class="example-image-lg" src="<?=$img[2]['url'];?>" width="304" height="300" />
             </a>
         </li>
         <li class="smart4">
-            <a class="example-image-link bwWrapper" href="files/big-img4.jpg" data-lightbox="example-4">
-                <img class="example-image-sm" src="files/big-img.jpg" width="150" height="150" />
+            <a class="example-image-link bwWrapper" href="<?=$img[3]['url'];?>" data-lightbox="example-4">
+                <img class="example-image-sm" src="<?=$img[3]['url'];?>" width="150" height="150" />
             </a>
         </li>
         <li class="smart5">
-            <a class="example-image-link bwWrapper" href="files/big-img5.jpg" data-lightbox="example-5">
-                <img class="example-image-sm" src="files/big-img.jpg" width="150" height="150" />
+            <a class="example-image-link bwWrapper" href="<?=$img[4]['url'];?>" data-lightbox="example-5">
+                <img class="example-image-sm" src="<?=$img[4]['url'];?>" width="150" height="150" />
             </a>
         </li>
         <li class="last-6">
-             <a class="example-image-link bwWrapper" href="files/big-img6.jpg" data-lightbox="example-6">
-                <img class="example-image-lg" src="files/big-img.jpg" width="304" height="300" />
+             <a class="example-image-link bwWrapper" href="<?=$img[5]['url'];?>" data-lightbox="example-6">
+                <img class="example-image-lg" src="<?=$img[5]['url'];?>" width="304" height="300" />
             </a>
         </li>
         <li class="last-7">
-            <a class="example-image-link bwWrapper" href="files/big-img7.jpg" data-lightbox="example-7">
-                <img class="example-image-sm" src="files/big-img.jpg" width="150" height="150" />
+            <a class="example-image-link bwWrapper" href="<?=$img[6]['url'];?>" data-lightbox="example-7">
+                <img class="example-image-sm" src="<?=$img[6]['url'];?>" width="150" height="150" />
             </a>
         </li>
         <li class="last-8">
-            <a class="example-image-link bwWrapper" href="files/big-img8.jpg" data-lightbox="example-8">
-                <img class="example-image-sm" src="files/big-img.jpg" width="150" height="150" />
+            <a class="example-image-link bwWrapper" href="<?=$img[7]['url'];?>" data-lightbox="example-8">
+                <img class="example-image-sm" src="<?=$img[7]['url'];?>" width="150" height="150" />
             </a>
         </li>
         <li class="last-9">
-            <a class="example-image-link bwWrapper" href="files/big-img9.jpg" data-lightbox="example-9">
-                <img class="example-image-lg" src="files/big-img.jpg" width="304" height="300" />
+            <a class="example-image-link bwWrapper" href="<?=$img[8]['url'];?>" data-lightbox="example-9">
+                <img class="example-image-lg" src="<?=$img[8]['url'];?>" width="304" height="300" />
             </a>
         </li>
     </ul>
@@ -275,7 +283,7 @@
                      </div>
                     </h2>
                     <h3 class="section-subheading text-muted"></h3>
-                <div data-slick='{"slidesToShow": 4, "slidesToScroll": 4, "dots": true}'>
+                <div data-slick='{"slidesToShow": 4, "slidesToScroll": 4, "dots": false}'>
                 <?php
                 $logos = select_logos();
                 foreach($logos as $logo):
@@ -298,7 +306,7 @@
                             <div class="clearfix"></div>
                             <div class="col-lg-12 text-center">
                                 <div id="success"></div>
-                                <button type="submit" class="btn btn-xl pull-right">Fale Conosco</button>
+                                <button type="button" class="btn btn-xl pull-right" data-toggle="modal" data-target="#myModal">Fale Conosco</button>
                             </div>
                         </div>
                     </form>
@@ -306,6 +314,56 @@
             </div>
         </div>
     </section>
+
+    <!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Fale Conosco</h4>
+      </div>
+      <div class="modal-body">
+        <form action="envia.php" method="POST">
+             <div class="input-group">
+                <div class="row">
+                    <div class="col-md-8">
+                        <label for="nome">Seu Nome *</label>
+                        <input type="text" class="form-control" name="nome" id="nome" placeholder="Digite o seu Nome" required>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-8">
+                        <label for="email">Seu Email *</label>
+                        <input type="text" class="form-control" name="email" id="email" placeholder="Digite o seu Email" required>
+                    </div>
+                </div>
+                 <div class="row">
+                    <div class="col-md-8">
+                        <label for="assunto">Assunto *</label>
+                        <input type="text" class="form-control" name="assunto" id="assunto" placeholder="Assunto" required>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                     <label for="mensagem">Mensagem *</label>
+                        <textarea value="Mensagem" class="form-control" name="mensagem" id="mensagem" placeholder="Mensagem" required></textarea>
+                    </div>
+                </div>
+                <div class="row">
+                    <p><strong>Todos os campos são obrigatórios.</strong></p>
+                </div>
+            </div>
+        
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+        <button type="submit" class="btn btn-primary" data-loading-text="Enviando...">Enviar</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
 
         <!--Contatos e Footer Section-->
           <div class="footer">
@@ -417,6 +475,16 @@
     <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
     <script type="text/javascript" src="slick/slick.min.js"></script>
 
+<script type="text/javascript">  
+$(function() { 
+    $(".btn").click(function(){
+        $(this).button('loading').delay(4000).queue(function() {
+            $(this).button('reset');
+            $(this).dequeue();
+        });        
+    });
+});   
+</script>
 </body>
 
 </html>

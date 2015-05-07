@@ -15,7 +15,7 @@ if ($login->usuarioLogado() == true) {
 <html>
 <head>
 	<meta charset="UTF-8">
-	<title>Listar</title>
+	<title>Cases</title>
 	<link rel="stylesheet" type="text/css" href="semantic/semantic.min.css">
 	<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="../css/style.css">
@@ -46,8 +46,8 @@ if ($login->usuarioLogado() == true) {
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-6">
           <ul class="nav navbar-nav">
             <li><a href="index.php">Upload</a></li>
-            <li class="active"><a href="listar.php">Gerenciar Imagens</a></li>
-            <li><a href="cases.php">Cases</a></li>
+            <li><a href="listar.php">Gerenciar Imagens</a></li>
+            <li class="active"><a href="cases.php">Cases</a></li>
             <li><a href="index.php?logout">Sair</a></li>
           </ul>
         </div><!-- /.navbar-collapse -->
@@ -57,7 +57,7 @@ if ($login->usuarioLogado() == true) {
 
 <?php 
 require 'functions.php';
-$imagens = mostraImagens();
+$imagens = selectCases();
  ?>
 
 	<div class="container">
@@ -68,8 +68,8 @@ $imagens = mostraImagens();
 		<table class="ui striped table">
 			<thead>
 				<tr>
-					<th>Tipo</th>
-					<th>Arquivo</th>
+					<th>Nome</th>
+					<th>Imagem</th>
 					<th>#</th>
 				</tr>
 			</thead>
@@ -77,9 +77,9 @@ $imagens = mostraImagens();
 			<tbody>
 				<?php foreach ($imagens as $imagem) : ?>
 					<tr>
-						<td><?= $imagem['tipo']; ?></td>
+						<td><?= $imagem['tipo']." - Imagem ".$imagem['cod_img']; ?></td>
 						<td><img src="<?= $imagem['url'] ?>" width="250" height="140"></td>
-						<td><a href="javascript:excluiImg(<?= $imagem['cod_img']; ?>)"><i class="fa fa-trash fa-2x"></i> Excluir</a></td>
+						<td><a href="javascript:alterarImg(<?= $imagem['cod_img']; ?>)"><i class="fa fa-edit fa-2x"></i> Alterar Imagem</a></td>
 					</tr>
 				<?php endforeach ?>
 			</tbody>
@@ -88,12 +88,12 @@ $imagens = mostraImagens();
 		</div>
 		</div>
 	</div>
-	<form action="delete.php" method="POST" id="excluiImg">
+	<form action="alterar.php" method="POST" id="alterarImg">
 		<input type="hidden" name="cod_img">
 	</form>
 	<script>
-	function excluiImg(cod_img){
-		f = document.getElementById('excluiImg');
+	function alterarImg(cod_img){
+		f = document.getElementById('alterarImg');
 		f.cod_img.value = cod_img;
 		f.submit();
 	}

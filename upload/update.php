@@ -1,9 +1,6 @@
 <?php 
 	require 'conexao.php';
 
-	
-
-	
 	date_default_timezone_set("America/Sao_Paulo"); //Definindo timezone padrão
 	 
 	$dir = 'imagens/'; //Diretório para uploads
@@ -14,18 +11,18 @@
 	$url = "http://localhost/Site-da-Inove/img/" . $dir . $_FILES['arquivo']['name'];
 
 try {
-	$dados = array(
-		'url' => $url,
-		'tipo' => $_POST['tipo']
-		);
+		$cod_img = $_POST['cod_img'];
+		
 
-	$sql = "INSERT INTO imagens (url, tipo)
-			values (:url, :tipo)";
+	$sql = "UPDATE imagens SET url = :url WHERE cod_img = :cod_img";
 
 	$inserir = $conexao->prepare($sql);
-	$inserir->execute($dados);
-	$_SESSION['msg_sucesso'] = "Upload concluido";
-	header("Location: index.php");
+	$inserir->bindParam('url',$url);
+	$inserir->bindParam('cod_img',$cod_img);
+	$inserir->execute();
+	
+	$_SESSION['msg_sucesso'] = "Imagem alterada com Sucesso!";
+	header("Location: cases.php");
 	} catch (PDOException $e) {
 		echo "Erro: " . $e->getMessage();
 	}
