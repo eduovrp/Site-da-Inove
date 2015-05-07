@@ -41,6 +41,8 @@
     <!--// Add the new slick-theme.css if you want the default styling -->
     <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
 
+    <link rel="stylesheet" type="text/css" href="font-awesome/css/font-awesome.min.css">
+
 </head>
 
 <body id="page-top" class="index">
@@ -79,6 +81,17 @@
                     <li>
                         <a class="page-scroll" href="#contact">Contato</a>
                     </li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="https://facebook.com"  target="_blank" title="Facebook"><i class="fa fa-facebook"></i></a>
+                    </li>
+                    <li>
+                        <a href="https://twitter.com"  target="_blank" title="Twitter"><i class="fa fa-twitter"></i></a>
+                    </li>
+                    <li>
+                        <a href="https://instagram.com"  target="_blank" title="Instagram"><i class="fa fa-instagram"></i></a>
+                    </li>
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
@@ -105,7 +118,7 @@
             </div>
             <!-- Slides Container -->
             <div u="slides" style="cursor: move; position: absolute; left: 0px; top: 0px; width: 1300px; height: 500px; overflow: hidden;">
-               <?php 
+               <?php
                require 'functions.php';
                $imagens = select_banner();
                foreach($imagens as $imagem):
@@ -263,7 +276,7 @@
                     </h2>
                     <h3 class="section-subheading text-muted"></h3>
                 <div data-slick='{"slidesToShow": 4, "slidesToScroll": 4, "dots": true}'>
-                <?php 
+                <?php
                 $logos = select_logos();
                 foreach($logos as $logo):
                  ?>
